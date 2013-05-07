@@ -95,10 +95,12 @@
 		    type: "POST",
 		    dataType: 'json',   
 		    success: function(data) {
-				console.log(data);	
-				jQuery("#message").html("<p>Success</p>");
-		    }
-		});
+				console.log(data);
+				alert('Your submission was saved');
+				jQuery("#message").html("<p>Successful Post</p>");
+				setTimeout(function(){
+              	        	 location.reload(); 
+          		}, 1500);
 	}
 	
 	function getNonce() {
